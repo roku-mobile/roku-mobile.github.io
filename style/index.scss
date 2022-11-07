@@ -1,0 +1,144 @@
+/*---------Template----------*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: #6C3C97;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+  font-family: Inter;
+}
+/*---------Template----------*/
+
+.btn-settings{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  svg{
+    padding: 10px;
+    width: 20px;
+    fill: #fff;
+    cursor: pointer;
+  }
+}
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 900px;
+  width: 100%;
+    margin-left: 20px;
+  margin-right: 20px;
+  overflow: hidden;
+  h1{
+    position: absolute;
+    font-size: 200px;
+    z-index: 1;
+    opacity: .3;
+    overflow: hidden;
+  }
+}
+.btn-send{
+  position: relative;
+  z-index: 5;
+  height: 40px;
+  background: #00D1FF;
+  color: #151515;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin-left: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.roku-input{
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width:900px;
+  height: 40px;
+  outline: none;
+  border-radius: 3px;
+  border: none;
+  font-size: 16px;
+  padding-left: 10px;
+  transition: .3s easy-in-out;
+  background: rgba(255, 255, 255, 0.2);
+  &:focus{
+  transition: .3s easy-in-out;
+    
+    background: rgba(255, 255, 255, 1);
+  }
+}
+
+.settings{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        label{
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input{
+            height: 35px;
+            outline: none;
+            width: 300px;
+            border-radius: 3px;
+            border: 1px solid #6C3C97;
+            padding-left: 10px;
+        }
+        button{
+            width: 100%;
+            height: 35px;
+            outline: none;
+            border-radius: 3px;
+            border: none;
+            background: #6C3C97;
+            color: #fff;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .center{
+        flex-wrap: wrap;
+        .btn-send{
+            margin-top: 10px;
+            width: 100%;
+            margin-left: 0;
+            display: flex;
+            justify-content: center;
+        }
+        h1{
+            font-size: 150px;
+        }
+    }
+}
